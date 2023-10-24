@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: aliceblue;
+  width: 100%;
+  min-height: 100vh;
+  background:linear-gradient(135deg,#000428,#004e92);
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  position: relative;
+}
+
+.title {
+  font-size: 30px;
+  margin: 5px;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none; 
+}
+
+.navbar-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  display: block;
+}
+
+.navbar-links li:hover {
+  background-color: gray;
+}
+
+.toggle-button {
+  display: none;
+  position: absolute;
+  top: 10px;;
+  right: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 20px;
+  border: none; 
+ 
+}
+
+.toggle-button .bar {
+  height: 2px; 
+  width: 30px;
+  background-color: white;
+  border-radius: 10px;
+}
+.intro{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  margin: 20px;
+}
+.intro h1{
+  font-size: 30px;
+  margin: 10px;
+}
+.intro h1::after{
+  content: '';
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: url('img/IMG_20230514_130201_040.jpg');
+  border-radius: 50%;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+ 
+}
+.description{
+  font-size: 20px;
+  margin:  10px;
+  max-width: 900px;
+  padding: 10px;
+  border: 2px ;
+}
+section{
+  margin: 10px;
+  padding: 10px 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+section p{
+  font-size: 20px;
+}
+.contact-section{
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+.contact-section p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-section #Tel::before{
+  content: '';
+  display:inline-flex;
+  text-align: center;
+  width: 24px;
+  height: 24px;
+  background: url('img/phone-rotary.png');
+  margin: 4px;
+}
+.contact-section #email::before{
+  content: '';
+  display:inline-flex;
+  text-align: center;
+  width: 24px;
+  height: 24px;
+  background: url('img/envelope.png');
+  margin: 4px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+  .toggle-button {
+      display: flex;
+  }
+
+  .navbar-links {
+      display:none;
+      width: 100%;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      background-color: black;
+  }
+
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links li {
+      text-align: center;
+  }
+
+  .navbar-links li a {
+      padding: 15px;
+  }
+  .navbar-links.active {
+    display: flex;
+}
+}
